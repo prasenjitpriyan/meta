@@ -1,4 +1,3 @@
-<div style="background-color: #357cf4; padding: 20px;">
 <h1>Meta Front-End Developer Professional Certificate</h1>
 
 <h3 style="text-decoration: underline;">Rendering</h3>
@@ -348,4 +347,81 @@ switch (light) {
 }
 ```
 
-</div>
+## Inheritance in JavaScript
+
+In JavaScript, inheritance allows a class to derive properties and characteristics from another class while having its own properties as well. There are two main types of inheritance in JavaScript: prototypal inheritance and class inheritance.
+
+```javascript
+let bird = {
+	hasWings: true,
+	canFly: true,
+	hasFeathers: true,
+};
+
+let eagle = Object.create(bird);
+console.log(eagle);
+console.log(eagle.hasWings);
+console.log(eagle.canFly);
+console.log(eagle.hasFeathers);
+
+let penguin = Object.create(bird);
+penguin.canFly = false;
+console.log(penguin);
+console.log(penguin.hasWings);
+console.log(penguin.canFly);
+console.log(penguin.hasFeathers);
+
+let parrot = Object.create(bird);
+console.log(parrot);
+console.log(parrot.hasWings);
+console.log(parrot.canFly);
+console.log(parrot.hasFeathers);
+```
+
+- Prototypal Inheritance: This type of inheritance involves the use of an object’s prototype to inherit properties and methods from another object. In JavaScript, “prototypal inheritance” is a mechanism by which an object can inherit the properties and methods of another object.
+
+```javascript
+// Parent object
+const person = {
+	name: 'John',
+	age: 30,
+	greet: function () {
+		console.log(`Hello, I'm ${this.name}`);
+	},
+};
+
+// Child object inheriting from the parent object
+const employee = Object.create(person);
+employee.jobTitle = 'Engineer';
+
+employee.greet(); // Output: Hello, I'm John
+console.log(employee.jobTitle); // Output: Engineer
+```
+
+- Class Inheritance: This type of inheritance involves the use of the extends keyword to create a new class that inherits properties and methods from another class.
+
+```javascript
+class Game {
+	constructor(name, maxNumberOfPlayers) {
+		this.name = name;
+		this.maxNumberOfPlayers = maxNumberOfPlayers;
+	}
+}
+
+// Child class inheriting from the Game class
+class Videogame extends Game {
+	constructor(name, maxNumberOfPlayers, platform) {
+		super(name, maxNumberOfPlayers);
+		this.platform = platform;
+	}
+}
+
+let game = new Game('Monopoly', 8);
+let videogame = new Videogame('UNO', 10, 'Nintendo Switch');
+
+console.log(game.name); // Output: Monopoly
+console.log(videogame.name); // Output: UNO
+console.log(videogame.platform); // Output: Nintendo Switch
+```
+
+In both cases, inheritance allows us to reuse previously-created class elements in a new class without having to rewrite the same code, resulting in more efficient and concise code.
