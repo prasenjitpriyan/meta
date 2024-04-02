@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metadata</title>
+  <meta name="description" content="A brief description">
+  <meta name="author" content="your site name">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="A brief description">
+  <meta property="og:type" content="website">
+  <meta property="or:url" content="https://www.website.com">
+  <meta property="og:description" content="A brief description">
+  <meta property="og:image" content="image.png">
+  <meta property="og:local" content="en_US">
+  <meta property="og:site_name" content="Little Lemon">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Include your CSS files here -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    input:focus:invalid {
+      border: 2px solid red
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <p>Add your website name or logo here</p>
+  </header>
+  <hr>
+  <nav>
+    <p>Add your website navigation here</p>
+  </nav>
+  <hr>
+  <main>
+    <p>Add your main content here</p>
+    <hr>
+    <section>
+      <form action="submit">
+        <h1>Checkbox</h1>
+        <input type="checkbox" id="dog" name="dog" value="Dog">
+        <label for="dog">I like dogs</label>
+        <input type="checkbox" id="cat" name="cat" value="Cat">
+        <label for="cat">I like cats</label>
+        <br>
+        <h1>Radio</h1>
+        <input type="radio" id="light" name="theme" value="Light">
+        <label for="light">Light</label>
+        <input type="radio" id="dark" name="theme" value="Dark">
+        <label for="dark">Dark</label>
+        <br>
+        <h1>Text & Password</h1>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required minlength="3" maxlength="12">
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" required minlength="5">
+        <h1>Date & Datetime-local</h1>
+        <label for="dob">Date of birth:</label>
+        <input type="date" id="dob" name="date of birth">
+        <label for="birthdaytime">Birthday (date and time):</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+        <br>
+        <h1>Email</h1>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <h1>File & Number</h1>
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile">
+        <input type="number" id="quantity" name="quantity" min="1" max="100">
+        <br>
+        <h1>Range</h1>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100">
+        <h1>Search</h1>
+        <label for="gsearch">Search in Google:</label>
+        <input type="search" id="gsearch" name="gsearch">
+        <br>
+        <h1>Time</h1>
+        <label for="appt">Select a time:</label>
+        <input type="time" id="appt" name="appt">
+        <br>
+        <h1>Telephone</h1>
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}">
+        <br>
+        <h1>Url</h1>
+        <label for="homepage">Add your homepage:</label>
+        <input type="url" id="homepage" name="homepage">
+        <br>
+        <h1>Week</h1>
+        <label for="week">Select a week:</label>
+        <input type="week" id="week" name="week">
+        <br>
+        <h1>Month</h1>
+        <label for="bdaymonth">Birthday (month and year):</label>
+        <input type="month" id="bdaymonth" name="bdaymonth" min="1930-01" value="2000-01">
+        <br>
+        <h1>Button & Reset</h1>
+        <button onclick="alert('Are you sure you want to continue?')">
+          Button
+        </button>
+        <input type="reset">
+      </form>
+    </section>
+    <br>
+  </main>
+  <hr>
+  <footer>
+    <p>Add your copyright information</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

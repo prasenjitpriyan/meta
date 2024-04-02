@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Little Lemon</title>
+
+  <meta property="og:title" content="Our Menu">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://littlelemon/">
+  <meta property="og:description"
+    content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Little Lemon">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <img src="../images/logo.png">
+  </header>
+  <main>
+    <h1>Book a Table</h1>
+    <form method="POST">
+      <div>
+        <label for="booking_data">Booking Date</label>
+        <input type="date" id="booking_data" name="booking_data">
+      </div>
+      <div>
+        <label for="booking_people">Number of People</label>
+        <input for="range" id="booking_people" name="booking_people" min="1" max="10" value="4"
+          oninput="this.nextElementSibling.value = this.value">
+        <output>4</output>
+      </div>
+      <div>
+        <label for="booking_location">Location</label>
+        <input id="booking_location" name="booking_location" list="locations">
+        <datalist id="locations">
+          <option value="Downtown">Downtown</option>
+          <option value="Uptown">Uptown</option>
+        </datalist>
+      </div>
+      <div>
+        <button type="submit">Book table</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p>Copyright Little Lemon</p>
+  </footer>
+</body>
+
+</html>
