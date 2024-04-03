@@ -1,0 +1,37 @@
+/* Element or type selector */
+p {
+    color: blue;
+    font-size: x-large;
+}
+/* ID Selector */
+#latest{
+    color: blueviolet;
+    font-size: x-large;
+}
+/* Class selector */
+.navigation{
+    color: coral;
+    text-decoration: none;
+    font-size: x-large;
+}
+/* Attribute selectors */
+a[class] {
+    color: red;
+}
+a[href*="meta"] {
+    color: darkblue;
+}
+a[href="https://about.meta.com/"] {
+    color: blueviolet;
+}
+/* nth-of-type and nth-child-selectors */
+li:nth-of-type(2) {
+    color: aqua;
+}
+li:nth-child(1){
+    color: red;
+}
+/* Group Selector or selector stacking*/
+h3, h4{
+    color: brown;
+}
