@@ -1,0 +1,17 @@
+*{
+    font-family: cursive;
+    background-color: blanchedalmond;
+}
+a:link{
+    color: blue;
+}
+a:visited{
+    color: blueviolet;
+}
+a:hover{
+    color: green;
+}
+a:active{
+    color: white;
+    background-color: black;
+}
