@@ -1,0 +1,12 @@
+#blog1 h1{
+    color: blue;
+}
+#blog2 > h1{
+    color: blue;
+}
+#blog3 h1 ~ p {
+    color: blue;
+}
+div + p {
+    color: greenyellow;
+}
