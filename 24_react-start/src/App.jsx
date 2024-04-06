@@ -2,6 +2,7 @@ import Card from "./components/Card";
 import Button from "./components/Button";
 import Toggle from "./components/Toggle";
 import DynamicEvents from "./components/DynamicEvents";
+import Promo from "./components/Promo";
 
 function App() {
   const clickHandler = () => {
@@ -20,9 +21,12 @@ function App() {
       <Button name="Props button" onClick={clickHandler} />
       <hr />
       <Toggle />
-      <br />
+      <hr />
       <h1>Dnamic Events</h1>
       <DynamicEvents />
+      <hr />
+      <h1>Parent-child data flow</h1>
+      <Promo />
     </div>
   );
 }
