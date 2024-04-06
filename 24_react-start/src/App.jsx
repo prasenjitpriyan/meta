@@ -3,6 +3,7 @@ import Button from "./components/Button";
 import Toggle from "./components/Toggle";
 import DynamicEvents from "./components/DynamicEvents";
 import Promo from "./components/Promo";
+import Dog from "./components/dataFlowInReact/Parent";
 
 function App() {
   const clickHandler = () => {
@@ -27,6 +28,9 @@ function App() {
       <hr />
       <h1>Parent-child data flow</h1>
       <Promo />
+      <hr />
+      <h1>Data flow in React</h1>
+      <Dog />
     </div>
   );
 }
