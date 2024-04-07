@@ -5,6 +5,7 @@ import DynamicEvents from "./components/DynamicEvents";
 import Promo from "./components/Promo";
 import Dog from "./components/dataFlowInReact/Parent";
 import Parent from "./components/childToParentDataFlow/Parent";
+import UseState from "./components/useState/UseState";
 
 function App() {
   const clickHandler = () => {
@@ -35,6 +36,9 @@ function App() {
       <hr />
       <h1>Passing Data from Child to Parent Components in React</h1>
       <Parent />
+      <hr />
+      <h1>useState</h1>
+      <UseState />
     </div>
   );
 }
