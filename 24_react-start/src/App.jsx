@@ -6,6 +6,9 @@ import Promo from "./components/Promo";
 import Dog from "./components/dataFlowInReact/Parent";
 import Parent from "./components/childToParentDataFlow/Parent";
 import UseState from "./components/useState/UseState";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import AboutMe from "./pages/AboutMe";
 
 function App() {
   const clickHandler = () => {
@@ -14,6 +17,18 @@ function App() {
 
   return (
     <div>
+      <nav>
+        <Link to="/" className="nav-item">
+          Homepage
+        </Link>
+        <Link to="/about" className="nav-item">
+          About Little Lemon
+        </Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutMe />} />
+      </Routes>
       <div className="App">
         <h1>Task: Add three Card elements</h1>
         <Card h2="First card's h2" h3="First card's h3" />
