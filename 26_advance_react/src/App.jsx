@@ -1,4 +1,5 @@
 import DessertsList from "./components/DessertsList";
+import FormExample from "./components/FormExample";
 
 const desserts = [
   {
@@ -28,6 +29,8 @@ function App() {
     <div>
       <h2>List of low calorie desserts:</h2>
       <DessertsList data={desserts} />
+      <h2>Creating a Form component in React</h2>
+      <FormExample />
     </div>
   );
 }
