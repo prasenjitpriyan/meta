@@ -1,4 +1,5 @@
 import DessertsList from "./components/DessertsList";
+import FeedbackForm from "./components/FeedbackForm";
 import FormExample from "./components/FormExample";
 
 const desserts = [
@@ -31,6 +32,8 @@ function App() {
       <DessertsList data={desserts} />
       <h2>Creating a Form component in React</h2>
       <FormExample />
+      <h2>Create a Feedback Controlled Form Component</h2>
+      <FeedbackForm />
     </div>
   );
 }
