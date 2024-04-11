@@ -12,7 +12,9 @@ const CarChildren = ({ defaultName, color }) => {
         onChange={(e) => setCarName(e.target.value)}
       />
       <p>My car name is {carName}</p>
-      <p>My car's color is {color}</p>
+      <p>
+        My {carName}'s color is {color}
+      </p>
     </div>
   );
 };
