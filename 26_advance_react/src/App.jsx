@@ -1,6 +1,7 @@
 import DessertsList from "./components/DessertsList";
 import FeedbackForm from "./components/FeedbackForm";
 import FormExample from "./components/FormExample";
+import SignUp from "./components/SignUp";
 
 const desserts = [
   {
@@ -27,13 +28,23 @@ const desserts = [
 
 function App() {
   return (
-    <div>
-      <h2>List of low calorie desserts:</h2>
+    <div className="bg-red-300 min-h-svh">
+      <h2 className="text-white font-bold text-2xl text-center uppercase">
+        List of low calorie desserts
+      </h2>
       <DessertsList data={desserts} />
-      <h2>Creating a Form component in React</h2>
+      <h2 className="text-white font-bold text-2xl text-center uppercase">
+        Creating a Form component in React
+      </h2>
       <FormExample />
-      <h2>Create a Feedback Controlled Form Component</h2>
+      <h2 className="text-white font-bold text-2xl text-center uppercase">
+        Create a Feedback Controlled Form Component
+      </h2>
       <FeedbackForm />
+      <h2 className="text-white font-bold text-2xl text-center uppercase">
+        Create a registration form
+      </h2>
+      <SignUp />
     </div>
   );
 }

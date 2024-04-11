@@ -10,7 +10,7 @@ const FormExample = () => {
   };
 
   return (
-    <div>
+    <div className="grid grid-cols-1 p-10 border-2">
       <form onSubmit={handleSubmit}>
         <fieldset>
           <div>

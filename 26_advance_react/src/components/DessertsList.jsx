@@ -1,7 +1,6 @@
 import React from "react";
 
 const DessertsList = (props) => {
-
   const lowCaloriesDesserts = props.data
     .filter((dessert) => {
       return dessert.calories < 500;
@@ -17,8 +16,8 @@ const DessertsList = (props) => {
       );
     });
   return (
-    <div>
-      <ul>{lowCaloriesDesserts}</ul>;
+    <div className="grid grid-cols-1 p-10 border-2">
+      <ul>{lowCaloriesDesserts}</ul>
     </div>
   );
 };

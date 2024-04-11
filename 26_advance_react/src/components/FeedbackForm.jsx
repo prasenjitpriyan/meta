@@ -17,7 +17,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div>
+    <div className="grid grid-cols-1 p-10 border-2">
       <form onSubmit={handleSubmit}>
         <fieldset>
           <h2>Feedback form</h2>
