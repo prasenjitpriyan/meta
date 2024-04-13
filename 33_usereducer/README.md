@@ -123,3 +123,48 @@ On the flip side, a negative characteristic of useReducer is that it requires mo
 ## Conclusion
 
 You learned about the decision-making process when choosing between useReducer and useState for working with different types of data.
+
+# use of useRef hook
+
+The useRef hook is a useful tool in React for working with mutable values and DOM elements. Here's a breakdown of its key functionalities:
+
+## Persisting Values Across Renders:
+
+Unlike state variables, which trigger re-renders when updated, useRef allows you to store mutable data that won't cause a re-render on changes. It's like having a container that holds a value throughout your component's lifecycle.
+
+This is helpful for scenarios where you need to track something without affecting the UI, like keeping count of renders or storing a reference to a DOM element for later manipulation.
+
+## Accessing DOM Elements:
+
+useRef is a common way to interact with DOM elements directly in functional components. You can attach a ref to a JSX element using the ref attribute. React will then assign the actual DOM element to the .current property of the ref object you created with useRef.
+
+This lets you access and manipulate the DOM element (e.g., focus an input field, measure its dimensions) using the .current property.
+
+Here's a basic example of using useRef for both purposes:
+
+```jsx
+import React, { useRef } from "react";
+
+function MyComponent() {
+  const count = useRef(0); // Persist count without re-renders
+  const inputRef = useRef(null); // Ref to access the input element
+
+  const handleClick = () => {
+    count.current = count.current + 1;
+    console.log("Count:", count.current);
+
+    if (inputRef.current) {
+      inputRef.current.focus(); // Focus the input element using the ref
+    }
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={handleClick}>Click me</button>
+    </div>
+  );
+}
+```
+
+In summary, useRef provides a way to manage mutable values and access DOM elements in React functional components, offering more control over specific use cases without affecting the rendering behavior.

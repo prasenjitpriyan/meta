@@ -1,5 +1,6 @@
 "use client";
 import { useReducer } from "react";
+import { Ref } from "./components/UseRef";
 
 const reducer = (state, action) => {
   if (action.type === "buy_ingradients") {
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <div className="mt-5">
       <h1 className="text-center text-2xl">Wallet: {state.money}</h1>
-      <div className="flex flex-row justify-center items-center p-10 gap-5">
+      <div className="flex flex-row justify-center items-center p-10 gap-10">
         <button
           className="bg-green-300 p-2 rounded"
           onClick={() => dispatch({ type: "buy_ingradients" })}
@@ -32,6 +33,7 @@ export default function Home() {
           Serve a meal to the customer
         </button>
       </div>
+      <Ref />
     </div>
   );
 }
